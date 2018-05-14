@@ -1,18 +1,24 @@
+import glob
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
+import cv2
 
 import CarND.thresholding as cnthresh
-import CarND.undistort as cnundist
 import CarND.calibration as cncalib
 
 
 objpoints, imgpoints = cncalib.getPointsInfo('camera_cal/calibration*.jpg', patternSize=(9,6))
 
+images = glob.glob('camera_cal/calibration*.jpg')
 
-
-
+for idx, fname in enumerate(images):
+    img = cv2.imread(fname)
+    dst = cncalib.cal_undistort(img, objpoints, imgpoints)
+    write_name = './undist_images/' + fname.split('/')[-1].split('.')[0] + '.jpg'
+    cv2.imwrite(write_name, dst)
+    print(write_name)
 
 
 # Read in an image
