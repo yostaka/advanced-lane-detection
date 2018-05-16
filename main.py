@@ -7,6 +7,7 @@ import cv2
 
 import CarND.thresholding as cnthresh
 import CarND.calibration as cncalib
+import CarND.perstransform as cntransform
 
 
 # Camera calibration
@@ -60,6 +61,25 @@ for idx, fname in enumerate(images):
 
     write_name = './undist_images/' + 'thresh_' + fname.split('/')[-1].split('.')[0] + '.jpg'
     cv2.imwrite(write_name, combined)
+
+
+
+# Get perspective transform
+img = mpimg.imread('undist_images/straight_lines1.jpg')
+warped_im = cntransform.warp(img)
+
+# Visualize undistortion
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
+ax1.set_title('Source image')
+ax1.imshow(img)
+ax1.plot(761, 499, '.')
+ax1.plot(1034, 673, '.')
+ax1.plot(277, 673, '.')
+ax1.plot(528, 499, '.')
+ax2.set_title('Warped image')
+ax2.imshow(warped_im)
+
+plt.show()
 
 # Plot the result
 # f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
