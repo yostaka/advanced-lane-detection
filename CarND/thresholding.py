@@ -90,3 +90,15 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi / 2)):
 
     # 6) Return this mask as your binary_output image
     return binary_output
+
+
+def color_threshold(img, thresh=(170, 255)):
+    # Convert to HLS color space and separate the S channel
+    hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    s_channel = hls[:, :, 2]
+
+    s_binary = np.zeros_like(s_channel)
+    s_binary[(s_channel >= thresh[0]) & (s_channel <= thresh[1])] = 1
+
+    return s_binary
+
