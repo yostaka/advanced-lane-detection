@@ -14,6 +14,7 @@ def getPointsInfo(img_files, patternSize=(8, 6)):
 
     # Make a list of calibration images
     images = glob.glob(img_files)
+    img_size = (0, 0)
 
     print("getPointsInfo patternSize: ", str(patternSize[0]), ",",  str(patternSize[1]))
 
@@ -21,6 +22,7 @@ def getPointsInfo(img_files, patternSize=(8, 6)):
     for idx, fname in enumerate(images):
         img = cv2.imread(fname)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        img_size = gray.shape[::-1]
 
         print("Processing ", fname)
 
@@ -42,7 +44,7 @@ def getPointsInfo(img_files, patternSize=(8, 6)):
         else:
             print("Corners are not detected")
 
-    return objpoints, imgpoints
+    return objpoints, imgpoints, img_size
 
 
 # performs the camera calibration, image distortion correction and
