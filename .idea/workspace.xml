@@ -21,8 +21,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="346">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -33,8 +33,8 @@
       <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="404">
+              <caret line="29" selection-start-line="20" selection-end-line="29" />
               <folding>
                 <element signature="e#1#11#0" expanded="true" />
               </folding>
@@ -132,6 +132,11 @@
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
               <item name="CarND" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
+              <item name="test_images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
@@ -405,8 +410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="404">
+          <caret line="29" selection-start-line="20" selection-end-line="29" />
           <folding>
             <element signature="e#1#11#0" expanded="true" />
           </folding>
@@ -415,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="346">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

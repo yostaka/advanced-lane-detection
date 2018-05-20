@@ -37,7 +37,7 @@ images = glob.glob('test_images/*.jpg')
 
 for idx, fname in enumerate(images):
     img = mpimg.imread(fname)
-    combined = cnld.getThresholdedBinaryImage(img, show_img=True)
+    combined = cnld.getThresholdedBinaryImage(img)
 
     write_name = './undist_images/' + 'thresh_' + fname.split('/')[-1].split('.')[0] + '.jpg'
     cv2.imwrite(write_name, combined)
@@ -61,9 +61,37 @@ plt.ylim(720, 0)
 plt.show()
 
 
+images = glob.glob('test_images/*.jpg')
+
+for idx, fname in enumerate(images):
+    img = mpimg.imread(fname)
+    out_img = cnld.getOverlayedImg(img, mtx, dist)
+
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
+    f.tight_layout()
+    ax1.imshow(img)
+    ax1.set_title('Original: ' + fname.split('/')[-1], fontsize=50)
+    ax2.imshow(out_img)
+    ax2.set_title('Overlayed Image', fontsize=50)
+    plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
+    plt.show()
+
+
 # Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position
 
 
+
+# Build video clip with lane detection
+from moviepy.editor import VideoFileClip
+
+
+def process_image(image):
+    return cnld.getOverlayedImg(image, mtx, dist)
+
+video_output = 'video_output/lane_detection.mp4'
+clip1 = VideoFileClip("project_video.mp4")
+video_clip = clip1.fl_image(process_image) #NOTE: this function expects color images!!
+video_clip.write_videofile(video_output, audio=False)
 
 
 

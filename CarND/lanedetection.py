@@ -207,3 +207,21 @@ def getLaneMaskImage(img, show_img=False):
     unwarped_lane_img = cntransform.unwarp(detected_lane_img)
 
     return unwarped_im, unwarped_lane_img
+
+
+def getOverlayedImg(img, mtx, dist, show_img=False):
+
+    dst = cv2.undistort(img, mtx, dist, None, mtx)
+    combined = getThresholdedBinaryImage(dst, show_img=show_img)
+    area_img, lane_img = getLaneMaskImage(combined)
+
+    out_img = cv2.addWeighted(img, 1, lane_img, 1, 0)
+    out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
+
+    if show_img:
+        plt.imshow(out_img)
+        plt.xlim(0, 1280)
+        plt.ylim(720, 0)
+        plt.show()
+
+    return out_img
