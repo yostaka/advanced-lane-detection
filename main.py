@@ -49,7 +49,7 @@ img = mpimg.imread('undist_images/thresh_straight_lines1.jpg')
 out_img = np.dstack((img, img, img)) * 255
 # img = mpimg.imread('undist_images/thresh_test2.jpg')
 
-area_img, lane_img = cnld.getLaneMaskImage(img)
+area_img, lane_img, _, _ = cnld.getLaneMaskImage(img)
 out_img = cv2.addWeighted(out_img, 1, lane_img, 1, 0)
 out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
 
@@ -78,6 +78,9 @@ for idx, fname in enumerate(images):
     plt.show()
 
 
+# Calculate curvature
+
+
 # Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position
 
 
@@ -89,7 +92,7 @@ from moviepy.editor import VideoFileClip
 def process_image(image):
     return cnld.getOverlayedImg(image, mtx, dist)
 
-video_output = 'video_output/lane_detection6.mp4'
+video_output = 'video_output/lane_detection7.mp4'
 clip1 = VideoFileClip("project_video.mp4")
 video_clip = clip1.fl_image(process_image) #NOTE: this function expects color images!!
 video_clip.write_videofile(video_output, audio=False)

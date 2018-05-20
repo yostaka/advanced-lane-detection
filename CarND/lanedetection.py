@@ -260,17 +260,39 @@ def getLaneMaskImage(img, show_img=False):
     unwarped_im = cntransform.unwarp(window_img)
     unwarped_lane_img = cntransform.unwarp(detected_lane_img)
 
-    return unwarped_im, unwarped_lane_img
+    # Calculate radius of curvature
+    y_eval = np.max(ploty)
+    ym_per_px = 60/720
+    xm_per_px = 3.7/720
+    left_fit_cr = np.polyfit(lefty*ym_per_px, leftx*xm_per_px, 2)
+    right_fit_cr = np.polyfit(righty*ym_per_px, rightx*xm_per_px, 2)
+    left_curverad = ((1 + (2 * left_fit_cr[0] * y_eval * ym_per_px + left_fit_cr[1]) ** 2) ** 1.5) / np.absolute(2 * left_fit_cr[0])
+    right_curverad = ((1 + (2 * right_fit_cr[0] * y_eval *ym_per_px + right_fit_cr[1]) ** 2) ** 1.5) / np.absolute(2 * right_fit_cr[0])
+    curverad = (left_curverad + right_curverad) // 2
+
+    # Calculate vehicle position
+    left_line_pos = left_fit[0] * y_eval**2 + left_fit[1] * y_eval + left_fit[2]
+    right_line_pos = 1280 - (right_fit[0] * y_eval ** 2 + right_fit[1] * y_eval + right_fit[2])
+    vehicle_pos = (left_line_pos - right_line_pos) * xm_per_px
+
+    return unwarped_im, unwarped_lane_img, curverad, vehicle_pos
 
 
 def getOverlayedImg(img, mtx, dist, show_img=False):
 
     dst = cv2.undistort(img, mtx, dist, None, mtx)
     combined = getThresholdedBinaryImage(dst, show_img=show_img)
-    area_img, lane_img = getLaneMaskImage(combined, show_img=show_img)
+    area_img, lane_img, curve_rad, vehicle_pos = getLaneMaskImage(combined, show_img=show_img)
 
     out_img = cv2.addWeighted(img, 1, lane_img, 1, 0)
     out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
+
+    cv2.putText(out_img, 'Radius of Curvature = {:.0f}'.format(curve_rad)+'(m)', (0, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+
+    if vehicle_pos > 0:
+        cv2.putText(out_img, 'Vehicle is {:.2f}'.format(abs(vehicle_pos))+'m left of center', (0, 100), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+    else:
+        cv2.putText(out_img, 'Vehicle is {:.2f}'.format(abs(vehicle_pos))+'m right of center', (0, 100), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
 
     if show_img:
         plt.imshow(out_img)
