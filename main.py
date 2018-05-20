@@ -66,7 +66,8 @@ for idx, fname in enumerate(images):
 
 
 # Get perspective transform
-img = mpimg.imread('undist_images/thresh_straight_lines1.jpg')
+img = mpimg.imread('undist_images/thresh_straight_lines2.jpg')
+# img = mpimg.imread('undist_images/thresh_test2.jpg')
 warped_im = cntransform.warp(img)
 
 # Visualize undistortion
@@ -115,7 +116,7 @@ leftx_current = leftx_base
 rightx_current = rightx_base
 
 # Set the width of the windows +/- margin
-margin = 100
+margin = 100  # original was 100
 
 # Set minimum number of pixels found to recenter window
 minpix = 50
@@ -184,9 +185,61 @@ plt.ylim(720, 0)
 plt.show()
 
 
+# Create an image to draw on and an image to show the selection window
+out_img  = np.dstack((warped_im, warped_im, warped_im))*255
+window_img = np.zeros_like(out_img)
+# Color in left and right lane pixels
+out_img[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] = [255, 0, 0]
+out_img[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [0, 0, 255]
+
+# Generate a polygon to illustrate the search window area
+# And recast the x and y points into usable format for cv2.fillPoly()
+left_line_window1 = np.array([np.transpose(np.vstack([left_fitx-margin, ploty]))])
+left_line_window2 = np.array([np.flipud(np.transpose(np.vstack([left_fitx+margin, ploty])))])
+left_line_pts = np.hstack((left_line_window1, left_line_window2))
+
+right_line_window1 = np.array([np.transpose(np.vstack([right_fitx-margin, ploty]))])
+right_line_window2 = np.array([np.flipud(np.transpose(np.vstack([right_fitx+margin, ploty])))])
+right_line_pts = np.hstack((right_line_window1, right_line_window2))
+
+# Draw the lane onto the warped blank image
+cv2.fillPoly(window_img, np.int_([left_line_pts]), (0, 255, 0))
+cv2.fillPoly(window_img, np.int_([right_line_pts]), (0, 255, 0))
+result = cv2.addWeighted(out_img, 1, window_img, 0.3, 0)
+plt.imshow(result)
+plt.plot(left_fitx, ploty, color='yellow')
+plt.plot(right_fitx, ploty, color='yellow')
+plt.xlim(0, 1280)
+plt.ylim(720, 0)
+plt.show()
+
+
+# Fill area between left lane and right lane
+out_img = np.dstack((warped_im, warped_im, warped_im))*255
+window_img = np.zeros_like(out_img)
+# Color in left and right lane pixels
+out_img[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] = [255, 0, 0]
+out_img[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [0, 0, 255]
+
+left_line = np.array([np.transpose(np.vstack([left_fitx, ploty]))])
+right_line = np.array([np.transpose(np.vstack([right_fitx, ploty]))[::-1]])
+lane_area_pts = np.hstack((left_line, right_line))
+
+# Fill the area between lanes onto warped blank image
+cv2.fillPoly(window_img, np.int_([lane_area_pts]), (0, 255, 0))
+result = cv2.addWeighted(out_img, 1, window_img, 0.3, 0)
+plt.imshow(result)
+plt.xlim(0, 1280)
+plt.ylim(720, 0)
+plt.show()
 
 
 # Warp the detected lane boundaries back onto the original image
+unwarped_im = cntransform.unwarp(result)
+plt.imshow(unwarped_im)
+plt.xlim(0, 1280)
+plt.ylim(720, 0)
+plt.show()
 
 
 # Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position
