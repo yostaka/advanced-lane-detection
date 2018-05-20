@@ -62,10 +62,11 @@ plt.show()
 
 
 images = glob.glob('test_images/*.jpg')
+# images = glob.glob('test_images/test6.jpg')
 
 for idx, fname in enumerate(images):
     img = mpimg.imread(fname)
-    out_img = cnld.getOverlayedImg(img, mtx, dist)
+    out_img = cnld.getOverlayedImg(img, mtx, dist, show_img=True)
 
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
     f.tight_layout()
@@ -88,7 +89,7 @@ from moviepy.editor import VideoFileClip
 def process_image(image):
     return cnld.getOverlayedImg(image, mtx, dist)
 
-video_output = 'video_output/lane_detection.mp4'
+video_output = 'video_output/lane_detection6.mp4'
 clip1 = VideoFileClip("project_video.mp4")
 video_clip = clip1.fl_image(process_image) #NOTE: this function expects color images!!
 video_clip.write_videofile(video_output, audio=False)

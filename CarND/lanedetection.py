@@ -7,28 +7,84 @@ import CarND.perstransform as cntransform
 import CarND.thresholding as cnthresh
 
 
-def getThresholdedBinaryImage(img, ksize=15, show_img=False):
+def region_of_interest(img, vertices):
+    """
+    Applies an image mask.
+
+    Only keeps the region of the image defined by the polygon
+    formed from `vertices`. The rest of the image is set to black.
+    """
+    # defining a blank mask to start with
+    mask = np.zeros_like(img)
+
+    # defining a 3 channel or 1 channel color to fill the mask with depending on the input image
+    if len(img.shape) > 2:
+        channel_count = img.shape[2]  # i.e. 3 or 4 depending on your image
+        ignore_mask_color = (255,) * channel_count
+    else:
+        ignore_mask_color = 255
+
+    # filling pixels inside the polygon defined by "vertices" with the fill color
+    cv2.fillPoly(mask, vertices, ignore_mask_color)
+
+    # returning the image only where mask pixels are nonzero
+    masked_image = cv2.bitwise_and(img, mask)
+    return masked_image
+
+
+def getMaskedImage(img):
+    # Mask the image to extract areas where lane line shows up
+    # mask = np.zeros_like(img)
+    # ignore_mask_color = 255
+
+    # Define a four sided polygon to mask
+    imshape = img.shape
+    # vertices = np.array([[(0, imshape[0]), (imshape[1]*2/5, imshape[0]*3/5), (imshape[1]*3/5, imshape[0]*3/5), (imshape[1],imshape[0])]], dtype=np.int32)
+    # vertices = np.array([[(160, imshape[0]), (570, 430), (680, 430), (1200, imshape[0])]], dtype=np.int32)
+    vertices = np.array([[(160, imshape[0]), (590, 430), (680, 430), (1220, imshape[0])]], dtype=np.int32)
+
+    masked_edges = region_of_interest(img, vertices)
+    return masked_edges
+
+
+def getThresholdedBinaryImage(img, ksize=9, show_img=False):
     gradx = cnthresh.abs_sobel_thresh(img, orient='x', sobel_kernel=ksize, thresh=(20, 100))
     grady = cnthresh.abs_sobel_thresh(img, orient='y', sobel_kernel=ksize, thresh=(20, 100))
-    mag_binary = cnthresh.mag_thresh(img, sobel_kernel=3, mag_thresh=(30, 100))
-    dir_binary = cnthresh.dir_threshold(img, sobel_kernel=15, thresh=(0.7, 1.3))
+    mag_binary = cnthresh.mag_thresh(img, sobel_kernel=ksize, mag_thresh=(30, 100))
+    dir_binary = cnthresh.dir_threshold(img, sobel_kernel=ksize, thresh=(0.7, 1.3))
     color_binary = cnthresh.color_threshold(img, thresh=(170, 255))
 
     combined = np.zeros_like(dir_binary, dtype='uint8')
     combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
+    # combined[(gradx == 1) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
+    # combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1))] = 255
+
+    masked_combined = getMaskedImage(combined)
 
     if show_img:
-        f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
+        f, axes = plt.subplots(nrows=4, ncols=2, figsize=(20, 20))
         f.tight_layout()
-        ax1.imshow(img)
-        ax1.set_title('Original Image', fontsize=50)
-        ax2.imshow(combined, cmap='gray')
-        ax2.set_title('Combined Thresholded Image', fontsize=50)
+        axes[0, 0].imshow(img)
+        axes[0, 0].set_title('Original Image', fontsize=40)
+        axes[0, 1].imshow(gradx, cmap='gray')
+        axes[0, 1].set_title('gradx', fontsize=40)
+        axes[1, 0].imshow(grady, cmap='gray')
+        axes[1, 0].set_title('grady', fontsize=40)
+        axes[1, 1].imshow(mag_binary, cmap='gray')
+        axes[1, 1].set_title('mag_binary', fontsize=40)
+        axes[2, 0].imshow(dir_binary, cmap='gray')
+        axes[2, 0].set_title('dir_binary', fontsize=40)
+        axes[2, 1].imshow(color_binary, cmap='gray')
+        axes[2, 1].set_title('color_binary', fontsize=40)
+        axes[3, 0].imshow(combined, cmap='gray')
+        axes[3, 0].set_title('Combined Thresholded Image', fontsize=40)
+        axes[3, 1].imshow(masked_combined, cmap='gray')
+        axes[3, 1].set_title('Masked Combined Image', fontsize=40)
         plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
         plt.show()
 
-    return combined
+    return masked_combined
 
 
 def getLaneMaskImage(img, show_img=False):
@@ -57,10 +113,8 @@ def getLaneMaskImage(img, show_img=False):
 
     # Create an output image to draw on and visualize the result
     out_img = np.dstack((warped_im, warped_im, warped_im))
-    # plt.imshow(out_img)
-    # plt.show()
 
-    # Fine the peak of the left and right halves of the histogram
+    # Find the peak of the left and right halves of the histogram
     # These will be the starting point for the left and right lanes
     midpoint = np.int(histogram.shape[0] // 2)
     leftx_base = np.argmax(histogram[:midpoint])
@@ -213,7 +267,7 @@ def getOverlayedImg(img, mtx, dist, show_img=False):
 
     dst = cv2.undistort(img, mtx, dist, None, mtx)
     combined = getThresholdedBinaryImage(dst, show_img=show_img)
-    area_img, lane_img = getLaneMaskImage(combined)
+    area_img, lane_img = getLaneMaskImage(combined, show_img=show_img)
 
     out_img = cv2.addWeighted(img, 1, lane_img, 1, 0)
     out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
