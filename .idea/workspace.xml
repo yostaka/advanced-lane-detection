@@ -4,7 +4,6 @@
     <list default="true" id="79f0c0e4-27fc-4f05-a6b4-60f06b3b8ca6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarND/lanedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/lanedetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarND/perstransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/perstransform.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +16,27 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CarND_Advanced_Lane_Lines$main_py.coverage" NAME="main.py Coverage Results" MODIFIED="1526822092860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="373">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -34,8 +47,8 @@
       <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="220" selection-start-line="220" selection-end-line="221" />
+            <state relative-caret-position="642">
+              <caret line="331" selection-start-line="328" selection-end-line="331" />
               <folding>
                 <element signature="e#1#11#0" expanded="true" />
               </folding>
@@ -46,8 +59,8 @@
       <file leaf-file-name="calibration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="240">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -88,6 +101,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>undistort</find>
+      <find>show</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -114,10 +133,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1353" />
     <option name="y" value="23" />
-    <option name="width" value="2007" />
-    <option name="height" value="1817" />
+    <option name="width" value="1565" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,17 +154,27 @@
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_cal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
               <item name="CarND" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
-              <item name="test_images" type="462c0819:PsiDirectoryNode" />
+              <item name="chessboard_corners" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
-              <item name="undist_images" type="462c0819:PsiDirectoryNode" />
+              <item name="output_images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
+              <item name="test_images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,19 +253,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1353" y="23" width="2007" height="1817" extended-state="0" />
+    <frame x="0" y="23" width="1565" height="1128" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32913843" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1994186" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21532492" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32917705" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10839695" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22468354" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info active="true" anchor="right" id="SciView" order="4" visible="true" weight="0.44936386" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.3919895" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39825583" />
@@ -250,6 +279,30 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22468354" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.47018105" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33268672" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32913843" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39825583" />
+      <window_info anchor="right" x="0" y="0" width="790" height="1618" id="Documentation" order="5" side_tool="true" weight="0.32941532" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32917705" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -388,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/thresholding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -408,10 +451,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/color_fit_lines.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/save_output_here.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/thresholding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="240">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -420,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="220" selection-start-line="220" selection-end-line="221" />
+        <state relative-caret-position="642">
+          <caret line="331" selection-start-line="328" selection-end-line="331" />
           <folding>
             <element signature="e#1#11#0" expanded="true" />
           </folding>
@@ -430,8 +489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="373">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

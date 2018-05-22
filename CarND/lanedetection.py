@@ -33,21 +33,15 @@ def region_of_interest(img, vertices):
 
 
 def getMaskedImage(img):
-    # Mask the image to extract areas where lane line shows up
-    # mask = np.zeros_like(img)
-    # ignore_mask_color = 255
-
     # Define a four sided polygon to mask
     imshape = img.shape
-    # vertices = np.array([[(0, imshape[0]), (imshape[1]*2/5, imshape[0]*3/5), (imshape[1]*3/5, imshape[0]*3/5), (imshape[1],imshape[0])]], dtype=np.int32)
-    # vertices = np.array([[(160, imshape[0]), (570, 430), (680, 430), (1200, imshape[0])]], dtype=np.int32)
     vertices = np.array([[(160, imshape[0]), (590, 430), (680, 430), (1220, imshape[0])]], dtype=np.int32)
 
     masked_edges = region_of_interest(img, vertices)
     return masked_edges
 
 
-def getThresholdedBinaryImage(img, ksize=9, show_img=False):
+def getThresholdedBinaryImage(img, ksize=9, show_img=False, name='', save_folder=None):
     gradx = cnthresh.abs_sobel_thresh(img, orient='x', sobel_kernel=ksize, thresh=(20, 100))
     grady = cnthresh.abs_sobel_thresh(img, orient='y', sobel_kernel=ksize, thresh=(20, 100))
     mag_binary = cnthresh.mag_thresh(img, sobel_kernel=ksize, mag_thresh=(30, 100))
@@ -62,6 +56,7 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False):
     masked_combined = getMaskedImage(combined)
 
     if show_img:
+        plt.figure()
         f, axes = plt.subplots(nrows=4, ncols=2, figsize=(20, 20))
         f.tight_layout()
         axes[0, 0].imshow(img)
@@ -82,16 +77,21 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False):
         axes[3, 1].set_title('Masked Combined Image', fontsize=40)
         plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_binary.jpg'
+            plt.savefig(write_name)
 
     return masked_combined
 
 
-def getLaneMaskImage(img, show_img=False):
+def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     warped_im = cntransform.warp(img)
 
     # Visualize undistortion
     if show_img:
+        plt.figure()
         f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
         ax1.set_title('Source image')
         ax1.imshow(img, cmap='gray')
@@ -102,14 +102,24 @@ def getLaneMaskImage(img, show_img=False):
         ax2.set_title('Warped image')
         ax2.imshow(warped_im, cmap='gray')
 
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_warped.jpg'
+            plt.savefig(write_name)
+
 
     # Detect lane pixels and fit to find the lane boundary
     histogram = np.sum(warped_im[warped_im.shape[0] // 2:, :], axis=0)
 
     if show_img:
+        plt.figure()
         plt.plot(histogram)
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_histogram.jpg'
+            plt.savefig(write_name)
 
     # Create an output image to draw on and visualize the result
     out_img = np.dstack((warped_im, warped_im, warped_im))
@@ -198,12 +208,17 @@ def getLaneMaskImage(img, show_img=False):
     out_img[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] = [255, 0, 0]
     out_img[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [0, 0, 255]
     if show_img:
+        plt.figure()
         plt.imshow(out_img)
         plt.plot(left_fitx, ploty, color='yellow')
         plt.plot(right_fitx, ploty, color='yellow')
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_laneplots.jpg'
+            plt.savefig(write_name)
 
     # Create an image to draw on and an image to show the selection window
     out_img = np.dstack((warped_im, warped_im, warped_im)) * 255
@@ -227,12 +242,17 @@ def getLaneMaskImage(img, show_img=False):
     cv2.fillPoly(window_img, np.int_([right_line_pts]), (0, 255, 0))
     result = cv2.addWeighted(out_img, 1, window_img, 0.3, 0)
     if show_img:
+        plt.figure()
         plt.imshow(result)
         plt.plot(left_fitx, ploty, color='yellow')
         plt.plot(right_fitx, ploty, color='yellow')
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_lanelines.jpg'
+            plt.savefig(write_name)
 
     # Fill area between left lane and right lane
     out_img = np.dstack((warped_im, warped_im, warped_im)) * 255
@@ -252,10 +272,15 @@ def getLaneMaskImage(img, show_img=False):
     result = cv2.addWeighted(out_img, 1, detected_lane_img, 1, 0)
     result = cv2.addWeighted(result, 1, window_img, 0.3, 0)
     if show_img:
+        plt.figure()
         plt.imshow(result)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_lanearea.jpg'
+            plt.savefig(write_name)
 
     unwarped_im = cntransform.unwarp(window_img)
     unwarped_lane_img = cntransform.unwarp(detected_lane_img)
@@ -278,11 +303,11 @@ def getLaneMaskImage(img, show_img=False):
     return unwarped_im, unwarped_lane_img, curverad, vehicle_pos
 
 
-def getOverlayedImg(img, mtx, dist, show_img=False):
+def getOverlayedImg(img, mtx, dist, show_img=False, name='', save_folder=None):
 
     dst = cv2.undistort(img, mtx, dist, None, mtx)
-    combined = getThresholdedBinaryImage(dst, show_img=show_img)
-    area_img, lane_img, curve_rad, vehicle_pos = getLaneMaskImage(combined, show_img=show_img)
+    combined = getThresholdedBinaryImage(dst, show_img=show_img, name=name, save_folder=save_folder)
+    area_img, lane_img, curve_rad, vehicle_pos = getLaneMaskImage(combined, show_img=show_img, name=name, save_folder=save_folder)
 
     out_img = cv2.addWeighted(img, 1, lane_img, 1, 0)
     out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
@@ -295,9 +320,14 @@ def getOverlayedImg(img, mtx, dist, show_img=False):
         cv2.putText(out_img, 'Vehicle is {:.2f}'.format(abs(vehicle_pos))+'m right of center', (0, 100), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
 
     if show_img:
+        plt.figure()
         plt.imshow(out_img)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        plt.show()
+        # plt.show()
+
+        if save_folder is not None:
+            write_name = save_folder + name + '_overlayed.jpg'
+            plt.savefig(write_name)
 
     return out_img
