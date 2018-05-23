@@ -12,13 +12,6 @@ def warp(img):
          [277, 673],
          [528, 499]])
 
-    # Four desired coordinates
-    # Need to fix values
-    # dst = np.float32(
-    #     [[761, 499],
-    #      [761, 673],
-    #      [277, 673],
-    #      [277, 499]])
     dst = np.float32(
         [[1034, 499],
          [1034, 673],

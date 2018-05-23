@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79f0c0e4-27fc-4f05-a6b4-60f06b3b8ca6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/calibration9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/straight_lines1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/straight_lines2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/test6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_straight_lines1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_straight_lines2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/undist_images/thresh_test6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection6.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_output/lane_detection7.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarND/perstransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/perstransform.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="134">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -86,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="3300">
+              <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
               <folding>
                 <element signature="e#1#11#0" expanded="true" />
               </folding>
@@ -113,8 +69,8 @@
       <file leaf-file-name="perstransform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -162,10 +118,10 @@
         <option value="$PROJECT_DIR$/CarND/__init__.py" />
         <option value="$PROJECT_DIR$/CarND/undistort.py" />
         <option value="$PROJECT_DIR$/CarND/thresholding.py" />
-        <option value="$PROJECT_DIR$/CarND/perstransform.py" />
         <option value="$PROJECT_DIR$/CarND/lanedetection.py" />
         <option value="$PROJECT_DIR$/CarND/calibration.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/CarND/perstransform.py" />
       </list>
     </option>
   </component>
@@ -524,16 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/save_output_here.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -550,16 +496,6 @@
     <entry file="file://$PROJECT_DIR$/examples/color_fit_lines.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -572,10 +508,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="134">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="292" lean-forward="true" selection-start-line="292" selection-end-line="292" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
