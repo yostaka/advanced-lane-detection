@@ -137,7 +137,8 @@ The code for lane detection are in a function called `getLaneMaskImage()` and la
 
 I describes steps for lane detection as follows.
 
-1. Take histogram counting number of pixels in same x coordinate. I used the 2 peaky x coordinates as starting points for left lane line and right lane line respectively. To be more precise, left lane detection starts with highest number of counts on left half area, and right lane detection starts with highest number of counts on right half area.
+1. Take histogram counting number of pixels in same x coordinate. I used the 2 peaky x coordinates as starting points for left lane line and right lane line respectively. To be more precise, left lane detection starts with x coordinate having highest number of counts on left half area, and right lane detection starts with x coordinate having highest number of counts on right half area.
+
 ![alt text][img-pipeline3]
 
 2. I used windowing method to determine which pixels are relevant to each lane lines, and it allows to follow curved lanes. Then, I fit my lane lines with a 2nd order polynominal.
@@ -179,4 +180,4 @@ Here's a [link to my video result](./output_images/video_output/lane_detection8.
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+For the curving road, the lane detection I implemented so far calculate lines as excessive steep curve than the one acutually is. This is caused by very few information on dashed car lane markers, which tend to make detected curve excessive. I could use smoothing algorithm among adjacent frames, which can mitigate such outlier frames.
