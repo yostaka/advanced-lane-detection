@@ -12,7 +12,7 @@ import CarND.lanedetection as cnld
 # Configurations
 generateVideo = False
 video_input = 'project_video.mp4'
-video_output = 'video_output/lane_detection7.mp4'
+video_output = 'output_images/video_output/lane_detection8.mp4'
 
 
 # Camera calibration
