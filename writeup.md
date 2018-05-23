@@ -154,9 +154,14 @@ I describes steps for lane detection as follows.
 
 I did this in lines 285 through 297 in my code in `lanedetection.py`
 
-To culculate the radius of curvature of the lane, I converted the measuring units from pixel to meters. I used 60/720[m/px] as vertical direction (y-coordinate) and 3.7/720 as horizontal direction (x-coordinate). For horizontal direction, I used US standard lane width (3.7 meters). For vertical direction, I adjusted the number so the radius of curvature result in roughly right radius.
+To culculate the radius of curvature of the lane, I converted the measuring units from pixel to meters. I used 60/720[m/px] as vertical direction (y-coordinate) and 3.7/720[m/px] as horizontal direction (x-coordinate). For horizontal direction, I used US standard lane width (3.7 meters). For vertical direction, I adjusted the number so the radius of curvature result in roughly right radius.
 
 Then, I used equation to calculate radius of curvature. For more details, https://www.intmath.com/applications-differentiation/8-radius-curvature.php is good reference to understand the theory.
+
+
+To culculate the position of the vehicle, I suppose that the camera is installed in the middle of the car, meaning that the center of the image corresponds to the center of the vehicle.
+
+First, I counted the number of pixels between most left of the image and detected left lane line at the bottom, and the number of pixels between most right of the image and detected right lane line at the bottom. I subtracted those two values to derive how many pixels the car is positioned relative to the center of the image. Then, I converted the unit of the distance from pixel to meter using 3.7/720[m/px]. The code for this process are lines 295 through line 297 in `lanedetection.py`.
 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
