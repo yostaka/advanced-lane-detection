@@ -39,25 +39,28 @@ Here's the code structure for this project:
 
 ```
 .
-+--- camera_cal/
++--- camera_cal/    # Chessboard images
 |  +--- calibration*.jpg
 |
-+--- CarND/
++--- CarND/         # Functions built for lane detection
 |  +--- calibration.py
 |  +--- lanedetection.py
 |  +--- perstransform.py
 |  +--- thresholding.py
 |
 +--- output_images/
-|  +--- undist_images/
-|  |  +--- 
+|  +--- image_output/   # Image outputs
+|  |  +--- chessboard/          # Undistorted chessboard images
+|  |  +--- chessboard_corners/  # Chessboard images with markers on corners
+|  |  +--- pipeline_images/     # Pipeline images ing process
+|  |  +--- results/             # Detected car lane + carveture and car position info on original images
 |  |
-|  +--- video_output/
+|  +--- video_output/   # Video outputs
 |
-+--- test_images/
++--- test_images/   # Original images
 |  +--- *.jpg
 |
-+--- main.py
++--- main.py    # Main code - entry point for the car lane detection
 ```
 
 ### Camera Calibration
