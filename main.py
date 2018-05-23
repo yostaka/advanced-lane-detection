@@ -21,12 +21,12 @@ ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, img_siz
 
 # Undistort chess board images and save them to output_images folder
 images = glob.glob('camera_cal/calibration*.jpg')
+print('Generating undistorted chessboard images...')
 for idx, fname in enumerate(images):
     img = cv2.imread(fname)
     dst = cv2.undistort(img, mtx, dist, None, mtx)
     write_name = './output_images/image_output/chessboard/' + fname.split('/')[-1].split('.')[0] + '.jpg'
     cv2.imwrite(write_name, dst)
-    print(write_name)
 
 
 # Generate lane detection result images for all jpg files under test_images folder
@@ -34,8 +34,7 @@ for idx, fname in enumerate(images):
 images = glob.glob('test_images/*.jpg')
 
 for idx, fname in enumerate(images):
-    print('processing', fname)
-
+    print("Processing lane detection on", fname)
     img = mpimg.imread(fname)
     out_img = cnld.getOverlayedImg(img, mtx, dist, show_img=True, name=fname.split('/')[-1].split('.')[-2], save_folder='./output_images/image_output/pipeline_images/')
 
@@ -47,10 +46,11 @@ for idx, fname in enumerate(images):
     ax2.imshow(out_img)
     ax2.set_title('Overlayed Image', fontsize=50)
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
-    # plt.show()
 
     write_name = './output_images/image_output/results/' + fname.split('/')[-1]
     plt.savefig(write_name)
+
+print("")
 
 
 # Build video clip with lane detection

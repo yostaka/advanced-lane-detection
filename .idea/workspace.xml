@@ -3,71 +3,82 @@
   <component name="ChangeListManager">
     <list default="true" id="79f0c0e4-27fc-4f05-a6b4-60f06b3b8ca6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarND/calibration.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/calibration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarND/lanedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/lanedetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_binary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_histogram.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanearea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanelines.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_laneplots.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_overlayed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_warped.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/straight_lines1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/straight_lines1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/straight_lines2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/straight_lines2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chessboard_corners/corners_calibration9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_warped.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_binary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_histogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanearea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanelines.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_laneplots.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_overlayed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_warped.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -98,8 +109,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state relative-caret-position="275">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -107,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5100">
-              <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
+            <state relative-caret-position="515">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#1#11#0" expanded="true" />
               </folding>
@@ -119,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calibration.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calibration.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="630">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -168,7 +179,11 @@
     <findStrings>
       <find>undistort</find>
       <find>show</find>
+      <find>warped</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/output_images/image_output</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,11 +193,11 @@
       <list>
         <option value="$PROJECT_DIR$/CarND/__init__.py" />
         <option value="$PROJECT_DIR$/CarND/undistort.py" />
-        <option value="$PROJECT_DIR$/CarND/calibration.py" />
         <option value="$PROJECT_DIR$/CarND/thresholding.py" />
         <option value="$PROJECT_DIR$/CarND/perstransform.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/CarND/lanedetection.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/CarND/calibration.py" />
       </list>
     </option>
   </component>
@@ -197,7 +212,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1565" />
+    <option name="width" value="1285" />
     <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -217,22 +232,18 @@
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
-              <item name="camera_cal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
               <item name="CarND" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
-              <item name="chessboard_corners" type="462c0819:PsiDirectoryNode" />
+              <item name="output_images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarND-Advanced-Lane-Lines" type="462c0819:PsiDirectoryNode" />
               <item name="output_images" type="462c0819:PsiDirectoryNode" />
+              <item name="image_output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarND-Advanced-Lane-Lines" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +327,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1565" height="1128" extended-state="0" />
+    <frame x="0" y="23" width="1285" height="1128" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -326,10 +337,11 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32913843" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21532492" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32917705" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22468354" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751408" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
-      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.3919895" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.3919895" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39825583" />
@@ -340,7 +352,6 @@
       <window_info anchor="right" x="0" y="0" width="790" height="1618" id="Documentation" order="5" side_tool="true" weight="0.32941532" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Message" order="0" />
@@ -555,9 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/color_fit_lines.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/save_output_here.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -571,32 +579,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
+    <entry file="file://$PROJECT_DIR$/examples/color_fit_lines.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="515">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="275">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
+    <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5100">
-          <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
+        <state relative-caret-position="630">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
-            <element signature="e#1#11#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

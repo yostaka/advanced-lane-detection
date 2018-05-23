@@ -24,25 +24,23 @@ def getPointsInfo(img_files, patternSize=(8, 6)):
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         img_size = gray.shape[::-1]
 
-        print("Processing ", fname)
+        print("Extract chessboard corners from", fname, " ", end="")
 
         # Find the chessboard corners
         ret, corners = cv2.findChessboardCorners(gray, patternSize, None)
 
         # If found, add object points, image points
-        if ret == True:
+        if ret is True:
             objpoints.append(objp)
             imgpoints.append(corners)
 
             # Draw and display the corners
             cv2.drawChessboardCorners(img, patternSize, corners, ret)
-            write_name = './chessboard_corners/' + 'corners_' + fname.split('/')[-1].split('.')[0] + '.jpg'
+            write_name = './output_images/image_output/chessboard_corners/' + fname.split('/')[-1].split('.')[0] + '.jpg'
             cv2.imwrite(write_name, img)
-            # cv2.imshow('img', img)
-            # cv2.waitKey(500)
-            print("Corners found and saved as ", write_name)
+            print(": Corners found")
         else:
-            print("Corners are not detected")
+            print(": Corners not found")
 
     return objpoints, imgpoints, img_size
 

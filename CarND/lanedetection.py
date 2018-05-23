@@ -50,8 +50,6 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False, name='', save_folder
 
     combined = np.zeros_like(dir_binary, dtype='uint8')
     combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
-    # combined[(gradx == 1) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
-    # combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1))] = 255
 
     masked_combined = getMaskedImage(combined)
 
@@ -78,10 +76,8 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False, name='', save_folder
         axes[3, 1].set_title('Masked Combined Image')
         plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
-        # plt.show()
-
         if save_folder is not None:
-            write_name = save_folder + name + '_binary.jpg'
+            write_name = save_folder + name + '_1_binary.jpg'
             plt.savefig(write_name)
 
     return masked_combined
@@ -104,10 +100,8 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         ax2.set_title('Warped image')
         ax2.imshow(warped_im, cmap='gray')
 
-        # plt.show()
-
         if save_folder is not None:
-            write_name = save_folder + name + '_warped.jpg'
+            write_name = save_folder + name + '_2_warped.jpg'
             plt.savefig(write_name)
 
 
@@ -118,10 +112,9 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         plt.figure()
         plt.rcParams['font.size'] = 18
         plt.plot(histogram)
-        # plt.show()
 
         if save_folder is not None:
-            write_name = save_folder + name + '_histogram.jpg'
+            write_name = save_folder + name + '_3_histogram.jpg'
             plt.savefig(write_name)
 
     # Create an output image to draw on and visualize the result
@@ -218,10 +211,9 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         plt.plot(right_fitx, ploty, color='yellow')
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        # plt.show()
 
         if save_folder is not None:
-            write_name = save_folder + name + '_laneplots.jpg'
+            write_name = save_folder + name + '_4_laneplots.jpg'
             plt.savefig(write_name)
 
     # Create an image to draw on and an image to show the selection window
@@ -253,10 +245,9 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         plt.plot(right_fitx, ploty, color='yellow')
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        # plt.show()
 
         if save_folder is not None:
-            write_name = save_folder + name + '_lanelines.jpg'
+            write_name = save_folder + name + '_5_lanelines.jpg'
             plt.savefig(write_name)
 
     # Fill area between left lane and right lane
@@ -282,10 +273,9 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         plt.imshow(result)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        # plt.show()
 
         if save_folder is not None:
-            write_name = save_folder + name + '_lanearea.jpg'
+            write_name = save_folder + name + '_6_lanearea.jpg'
             plt.savefig(write_name)
 
     unwarped_im = cntransform.unwarp(window_img)
@@ -331,10 +321,9 @@ def getOverlayedImg(img, mtx, dist, show_img=False, name='', save_folder=None):
         plt.imshow(out_img)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
-        # plt.show()
 
         if save_folder is not None:
-            write_name = save_folder + name + '_overlayed.jpg'
+            write_name = save_folder + name + '_7_overlayed.jpg'
             plt.savefig(write_name)
 
     return out_img
