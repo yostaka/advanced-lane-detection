@@ -168,7 +168,7 @@ First, I counted the number of pixels between most left of the image and detecte
 
 I implemented this step in lines 266 through 282 in my code in `lanedetection.py` in the function `getLaneMaskImage()`.  Here is an example of my result on a test image:
 
-![alt text]![alt text][img-pipeline7]
+![alt text][img-pipeline7]
 
 
 ---
