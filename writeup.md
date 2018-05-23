@@ -17,6 +17,16 @@ The goals / steps of this project are the following:
 [img-cal2]: ./output_images/image_output/chessboard_corners/calibration2.jpg "Chessboard with detected corners"
 [img-cal3]: ./output_images/image_output/chessboard/calibration2.jpg "Undistored chessboard"
 
+[img-pipeline0]: ./test_images/test1.jpg "Original image"
+[img-pipeline1]: ./output_images/image_output/pipeline_images/test1_1_binary.jpg "Binary thresholded image"
+[img-pipeline2]: ./output_images/image_output/pipeline_images/test1_2_warped.jpg "Warped image"
+[img-pipeline3]: ./output_images/image_output/pipeline_images/test1_3_histogram.jpg "Histogram"
+[img-pipeline4]: ./output_images/image_output/pipeline_images/test1_4_laneplots.jpg "Lane plots"
+[img-pipeline5]: ./output_images/image_output/pipeline_images/test1_5_lanelines.jpg "Lane lines"
+[img-pipeline6]: ./output_images/image_output/pipeline_images/test1_6_lanearea.jpg "Lane area"
+[img-pipeline7]: ./output_images/image_output/pipeline_images/test1_7_overlayed.jpg "Overlayed image"
+
+
 [image1]: ./examples/undistort_output.png "Undistorted"
 [image2]: ./test_images/test1.jpg "Road Transformed"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
@@ -94,13 +104,13 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
+![alt text][img-pipeline0]
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image3]
+![alt text][img-pipeline1]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -130,13 +140,16 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+![alt text][img-pipeline2]
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
-![alt text][image5]
+![alt text][img-pipeline3]
+![alt text][img-pipeline4]
+![alt text][img-pipeline5]
+![alt text][img-pipeline6]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -146,7 +159,8 @@ I did this in lines # through # in my code in `my_other_file.py`
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
-![alt text][image6]
+![alt text]![alt text][img-pipeline7]
+
 
 ---
 
@@ -154,7 +168,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./output_images/video_output/lane_detection8.mp4)
 
 ---
 
