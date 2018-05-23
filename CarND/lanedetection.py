@@ -58,23 +58,24 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False, name='', save_folder
     if show_img:
         plt.figure()
         f, axes = plt.subplots(nrows=4, ncols=2, figsize=(20, 20))
-        f.tight_layout()
+        plt.rcParams['font.size'] = 18
+        plt.tight_layout(pad=3.0)
         axes[0, 0].imshow(img)
-        axes[0, 0].set_title('Original Image', fontsize=40)
+        axes[0, 0].set_title('Original Image')
         axes[0, 1].imshow(gradx, cmap='gray')
-        axes[0, 1].set_title('gradx', fontsize=40)
+        axes[0, 1].set_title('gradx')
         axes[1, 0].imshow(grady, cmap='gray')
-        axes[1, 0].set_title('grady', fontsize=40)
+        axes[1, 0].set_title('grady')
         axes[1, 1].imshow(mag_binary, cmap='gray')
-        axes[1, 1].set_title('mag_binary', fontsize=40)
+        axes[1, 1].set_title('mag_binary')
         axes[2, 0].imshow(dir_binary, cmap='gray')
-        axes[2, 0].set_title('dir_binary', fontsize=40)
+        axes[2, 0].set_title('dir_binary')
         axes[2, 1].imshow(color_binary, cmap='gray')
-        axes[2, 1].set_title('color_binary', fontsize=40)
+        axes[2, 1].set_title('color_binary')
         axes[3, 0].imshow(combined, cmap='gray')
-        axes[3, 0].set_title('Combined Thresholded Image', fontsize=40)
+        axes[3, 0].set_title('Combined Thresholded Image')
         axes[3, 1].imshow(masked_combined, cmap='gray')
-        axes[3, 1].set_title('Masked Combined Image', fontsize=40)
+        axes[3, 1].set_title('Masked Combined Image')
         plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
         # plt.show()
@@ -92,6 +93,7 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     # Visualize undistortion
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
         ax1.set_title('Source image')
         ax1.imshow(img, cmap='gray')
@@ -114,6 +116,7 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
 
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         plt.plot(histogram)
         # plt.show()
 
@@ -209,6 +212,7 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     out_img[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [0, 0, 255]
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         plt.imshow(out_img)
         plt.plot(left_fitx, ploty, color='yellow')
         plt.plot(right_fitx, ploty, color='yellow')
@@ -243,6 +247,7 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     result = cv2.addWeighted(out_img, 1, window_img, 0.3, 0)
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         plt.imshow(result)
         plt.plot(left_fitx, ploty, color='yellow')
         plt.plot(right_fitx, ploty, color='yellow')
@@ -273,6 +278,7 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     result = cv2.addWeighted(result, 1, window_img, 0.3, 0)
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         plt.imshow(result)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)
@@ -321,6 +327,7 @@ def getOverlayedImg(img, mtx, dist, show_img=False, name='', save_folder=None):
 
     if show_img:
         plt.figure()
+        plt.rcParams['font.size'] = 18
         plt.imshow(out_img)
         plt.xlim(0, 1280)
         plt.ylim(720, 0)

@@ -4,7 +4,70 @@
     <list default="true" id="79f0c0e4-27fc-4f05-a6b4-60f06b3b8ca6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarND/lanedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarND/lanedetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines1_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/straight_lines2_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test1_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test2_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test3_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test4_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test5_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_binary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_binary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_histogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_histogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanearea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanearea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanelines.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_lanelines.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_laneplots.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_laneplots.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_overlayed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_overlayed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_warped.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/pipeline_images/test6_warped.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/straight_lines1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/straight_lines1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/straight_lines2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/straight_lines2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_images/image_output/results/test6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output_images/image_output/results/test6.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -44,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lanedetection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="331" selection-start-line="328" selection-end-line="331" />
+            <state relative-caret-position="5100">
+              <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
               <folding>
                 <element signature="e#1#11#0" expanded="true" />
               </folding>
@@ -59,7 +122,7 @@
       <file leaf-file-name="calibration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="210">
               <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -71,7 +134,7 @@
       <file leaf-file-name="perstransform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
+            <state relative-caret-position="675">
               <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -83,7 +146,7 @@
       <file leaf-file-name="thresholding.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarND/thresholding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
+            <state relative-caret-position="1410">
               <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
@@ -118,8 +181,8 @@
         <option value="$PROJECT_DIR$/CarND/calibration.py" />
         <option value="$PROJECT_DIR$/CarND/thresholding.py" />
         <option value="$PROJECT_DIR$/CarND/perstransform.py" />
-        <option value="$PROJECT_DIR$/CarND/lanedetection.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/CarND/lanedetection.py" />
       </list>
     </option>
   </component>
@@ -280,28 +343,28 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22468354" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.47018105" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33268672" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22468354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33268672" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32913843" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39825583" />
       <window_info anchor="right" x="0" y="0" width="790" height="1618" id="Documentation" order="5" side_tool="true" weight="0.32941532" />
       <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32917705" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.47018105" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917705" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32913843" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,11 +388,58 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+        <state relative-caret-position="60">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4890">
+          <caret line="331" selection-start-line="328" selection-end-line="331" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarND/thresholding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -377,9 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -404,9 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -443,7 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CarND/perstransform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="675">
           <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -459,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CarND/thresholding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
+        <state relative-caret-position="1410">
           <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
@@ -469,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CarND/calibration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="210">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -477,22 +581,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="331" selection-start-line="328" selection-end-line="331" />
+        <state relative-caret-position="420">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
-            <element signature="e#1#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/CarND/lanedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="5100">
+          <caret line="340" lean-forward="true" selection-start-line="340" selection-end-line="340" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
