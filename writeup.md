@@ -133,12 +133,21 @@ Then, I applied warping process to other images using same src and dst parameter
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+The code for lane detection are in a function called `getLaneMaskImage()` and lane detection steps appears in line 108 through line 279 in the file `lanedetection.py` (CarND/lanedetection.py). 
 
+I describes steps for lane detection as follows.
+
+1. Take histogram counting number of pixels in same x coordinate. I used the 2 peaky x coordinates as starting points for left lane line and right lane line respectively. To be more precise, left lane detection starts with highest number of counts on left half area, and right lane detection starts with highest number of counts on right half area.
 ![alt text][img-pipeline3]
+
+2. I used windowing method to determine which pixels are relevant to each lane lines, and it allows to follow curved lanes. Then, I fit my lane lines with a 2nd order polynominal.
 ![alt text][img-pipeline4]
 ![alt text][img-pipeline5]
+
+3. I filled area in green between detected left lane line and right lane line.
 ![alt text][img-pipeline6]
+
+
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
