@@ -13,6 +13,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+[img-cal1]: ./camera_cal/calibration2.jpg "Original chessboard"
+[img-cal2]: ./output_images/image_output/chessboard_corners/calibration2.jpg "Chessboard with detected corners"
+[img-cal3]: ./output_images/image_output/chessboard/calibration2.jpg "Undistored chessboard"
+
 [image1]: ./examples/undistort_output.png "Undistorted"
 [image2]: ./test_images/test1.jpg "Road Transformed"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
@@ -71,7 +75,14 @@ The code for computing camera matrix, distortion coefficients and generating cor
 
 The line 13 in `main.py` calls `cncalib.getPointsInfo()` function defined in `/CarND/calibration.py`, which generates object points and image points using chessboard images. Then `cv2.calibrateCamera()` function at line 4 in `main.py` computes the camera matrix `mtx` and distortion coefficient `dist`. I applied these parameters to the test images using the `cv2.undistort()` function and obtained this result:
 
-![alt text][image1]
+Original chessboard
+![alt text][img-cal1]
+
+Chessboard with detected corners
+![alt text][img-cal2]
+
+Undistorted chessboard
+![alt text][img-cal3]
 
 Here's the detailed processing in the `cncalib.getPointsInfo()` function:
 
