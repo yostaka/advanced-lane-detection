@@ -26,14 +26,7 @@ The goals / steps of this project are the following:
 [img-pipeline6]: ./output_images/image_output/pipeline_images/test1_6_lanearea.jpg "Lane area"
 [img-pipeline7]: ./output_images/image_output/pipeline_images/test1_7_overlayed.jpg "Overlayed image"
 
-
-[image1]: ./examples/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
+[img-parallel-warped]: ./output_images/image_output/pipeline_images/straight_lines1_2_warped.jpg "Warped paralled lanes"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -108,37 +101,33 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines 45 through 54 in `lanedetection.py`).  Here's an example of my output for this step. At last step, I masked image area irrelevant to lane detection to reduce noise to lane detection algorithm. As a result, Masked Combined Image is used as input to detect lane lines.
 
 ![alt text][img-pipeline1]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `warp()`, which appears in lines 5 through 27 in the file `perstransform.py` (CarND/perstransform.py).  The `warp()` function takes as inputs an image (`img`).  I chose the hardcode the source and destination points in the following manner:
 
 ```python
 src = np.float32(
-    [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
-    [((img_size[0] / 6) - 10), img_size[1]],
-    [(img_size[0] * 5 / 6) + 60, img_size[1]],
-    [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
+    [[761, 499],
+     [1034, 673],
+     [277, 673],
+     [528, 499]])
+
 dst = np.float32(
-    [[(img_size[0] / 4), 0],
-    [(img_size[0] / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), 0]])
+    [[1034, 499],
+     [1034, 673],
+     [277, 673],
+     [277, 499]])
 ```
 
-This resulted in the following source and destination points:
+First, I verified using straight line images to check if the warped image have parallel lane lines.
 
-| Source        | Destination   | 
-|:-------------:|:-------------:| 
-| 585, 460      | 320, 0        | 
-| 203, 720      | 320, 720      |
-| 1127, 720     | 960, 720      |
-| 695, 460      | 960, 0        |
+![alt_text][img-parallel-warped]
 
-I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
+Then, I applied warping process to other images using same src and dst parameters. Follwing figure shows one of the images with curve applying the warping process.
 
 ![alt text][img-pipeline2]
 
