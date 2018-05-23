@@ -151,11 +151,16 @@ I describes steps for lane detection as follows.
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+I did this in lines 285 through 297 in my code in `lanedetection.py`
+
+To culculate the radius of curvature of the lane, I converted the measuring units from pixel to meters. I used 60/720[m/px] as vertical direction (y-coordinate) and 3.7/720 as horizontal direction (x-coordinate). For horizontal direction, I used US standard lane width (3.7 meters). For vertical direction, I adjusted the number so the radius of curvature result in roughly right radius.
+
+Then, I used equation to calculate radius of curvature. For more details, https://www.intmath.com/applications-differentiation/8-radius-curvature.php is good reference to understand the theory.
+
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in lines 266 through 282 in my code in `lanedetection.py` in the function `getLaneMaskImage()`.  Here is an example of my result on a test image:
 
 ![alt text]![alt text][img-pipeline7]
 
