@@ -76,7 +76,7 @@ Here's the code structure for this project:
 
 The code for computing camera matrix, distortion coefficients and generating corrected calibration images is contained in `main.py` and `./CarND/calibration.py`.
 
-The line 13 in `main.py` calls `cncalib.getPointsInfo()` function defined in `/CarND/calibration.py`, which generates object points and image points using chessboard images. Then `cv2.calibrateCamera()` function at line 4 in `main.py` computes the camera matrix `mtx` and distortion coefficient `dist`. I applied these parameters to the test images using the `cv2.undistort()` function and obtained this result:
+The line 19 in `main.py` calls `cncalib.getPointsInfo()` function defined in `/CarND/calibration.py`, which generates object points and image points using chessboard images. Then `cv2.calibrateCamera()` function at line 20 in `main.py` computes the camera matrix `mtx` and distortion coefficient `dist`. I applied these parameters to the test images using the `cv2.undistort()` function and obtained this result:
 
 Original chessboard
 ![alt text][img-cal1]
@@ -113,14 +113,14 @@ The code for my perspective transform includes a function called `warp()`, which
 src = np.float32(
     [[761, 499],
      [1034, 673],
-     [277, 673],
-     [528, 499]])
+     [274, 673],
+     [526, 499]])
 
 dst = np.float32(
     [[1034, 499],
      [1034, 673],
-     [277, 673],
-     [277, 499]])
+     [274, 673],
+     [274, 499]])
 ```
 
 First, I verified using straight line images to check if the warped image have parallel lane lines.
@@ -133,7 +133,7 @@ Then, I applied warping process to other images using same src and dst parameter
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-The code for lane detection are in a function called `getLaneMaskImage()` and lane detection steps appears in line 108 through line 279 in the file `lanedetection.py` (CarND/lanedetection.py). 
+The code for lane detection are in a function called `getLaneMaskImage()` and lane detection steps appears in line 99 through line 347 in the file `lanedetection.py` (CarND/lanedetection.py). 
 
 I describes steps for lane detection as follows.
 
@@ -152,21 +152,21 @@ I describes steps for lane detection as follows.
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines 285 through 297 in my code in `lanedetection.py`
+I did this in lines 329 through 339 in my code in `lanedetection.py`
 
-To culculate the radius of curvature of the lane, I converted the measuring units from pixel to meters. I used 60/720[m/px] as vertical direction (y-coordinate) and 3.7/720[m/px] as horizontal direction (x-coordinate). For horizontal direction, I used US standard lane width (3.7 meters). For vertical direction, I adjusted the number so the radius of curvature result in roughly right radius.
+To culculate the radius of curvature of the lane, I converted the measuring units from pixel to meters. I used 60/720[m/px] as vertical direction (y-coordinate) and 3.7/lane_width[m/px] as horizontal direction (x-coordinate). For horizontal direction, I used US standard lane width (3.7 meters) and lane_width are calculated by counting number of pixels between bottom x coodinate of left line and that of right line. For vertical direction, I adjusted the number so the radius of curvature result in roughly right radius.
 
 Then, I used equation to calculate radius of curvature. For more details, https://www.intmath.com/applications-differentiation/8-radius-curvature.php is good reference to understand the theory.
 
 
 To culculate the position of the vehicle, I suppose that the camera is installed in the middle of the car, meaning that the center of the image corresponds to the center of the vehicle.
 
-First, I counted the number of pixels between most left of the image and detected left lane line at the bottom, and the number of pixels between most right of the image and detected right lane line at the bottom. I subtracted those two values to derive how many pixels the car is positioned relative to the center of the image. Then, I converted the unit of the distance from pixel to meter using 3.7/720[m/px]. The code for this process are lines 295 through line 297 in `lanedetection.py`.
+First, I counted the number of pixels between most left of the image and detected left lane line at the bottom, and the number of pixels between most right of the image and detected right lane line at the bottom. I subtracted those two values to derive how many pixels the car is positioned relative to the center of the image. Then, I converted the unit of the distance from pixel to meter using 3.7/720[m/px]. The code for this process are lines 342 through line 344 in `lanedetection.py`.
 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines 266 through 282 in my code in `lanedetection.py` in the function `getLaneMaskImage()`.  Here is an example of my result on a test image:
+I implemented this step in lines 297 through 326 in my code in `lanedetection.py` in the function `getLaneMaskImage()`.  Here is an example of my result on a test image:
 
 ![alt text][img-pipeline7]
 
@@ -185,4 +185,6 @@ Here's a [link to my video result](./output_images/video_output/lane_detection8.
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-For the curving road, the lane detection I implemented so far calculate lines as excessive steep curve than the one acutually is. This is caused by very few information on dashed car lane markers, which tend to make detected curve excessive. I could use smoothing algorithm among adjacent frames, which can mitigate such outlier frames.
+For the curving road, the lane detection I implemented so far calculate lines as excessive steep curve than the one acutually is. This is caused by very few information on dashed car lane markers, which tend to make detected curve excessive. I implemented to ignore such an situation as outlier so it does not affect result.
+
+My current design rely on fixed clipping mask to extract road area in the image. It would not work when the car drives on steep slope, or when the camera position mounted on the car is changed. Having road area detection would make it more robust.
