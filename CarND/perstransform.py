@@ -9,14 +9,14 @@ def warp(img):
     src = np.float32(
         [[761, 499],
          [1034, 673],
-         [277, 673],
-         [528, 499]])
+         [274, 673],
+         [526, 499]])
 
     dst = np.float32(
         [[1034, 499],
          [1034, 673],
-         [277, 673],
-         [277, 499]])
+         [274, 673],
+         [274, 499]])
 
     # Compute the perspective transform, M
     M = cv2.getPerspectiveTransform(src, dst)
@@ -34,8 +34,8 @@ def unwarp(img):
     src = np.float32(
         [[761, 499],
          [1034, 673],
-         [277, 673],
-         [528, 499]])
+         [274, 673],
+         [526, 499]])
 
     # Four desired coordinates
     # Need to fix values
@@ -47,8 +47,8 @@ def unwarp(img):
     dst = np.float32(
         [[1034, 499],
          [1034, 673],
-         [277, 673],
-         [277, 499]])
+         [274, 673],
+         [274, 499]])
 
     # Compute the perspective transform, M
     Minv = cv2.getPerspectiveTransform(dst, src)

@@ -10,9 +10,9 @@ import CarND.lanedetection as cnld
 
 
 # Configurations
-generateVideo = False
+generateVideo = True
 video_input = 'project_video.mp4'
-video_output = 'output_images/video_output/lane_detection8.mp4'
+video_output = 'output_images/video_output/lane_detection.mp4'
 
 
 # Camera calibration
@@ -34,6 +34,7 @@ for idx, fname in enumerate(images):
 images = glob.glob('test_images/*.jpg')
 
 for idx, fname in enumerate(images):
+    cnld.clear_cache()
     print("Processing lane detection on", fname)
     img = mpimg.imread(fname)
     out_img = cnld.getOverlayedImg(img, mtx, dist, show_img=True, name=fname.split('/')[-1].split('.')[-2], save_folder='./output_images/image_output/pipeline_images/')
@@ -60,7 +61,9 @@ def process_image(image):
 
 
 if generateVideo is True:
+    cnld.clear_cache()
     clip1 = VideoFileClip(video_input)
+    # clip1 = VideoFileClip(video_input).subclip(35, 50)
     video_clip = clip1.fl_image(process_image)
     video_clip.write_videofile(video_output, audio=False)
 

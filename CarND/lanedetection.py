@@ -7,6 +7,18 @@ import CarND.perstransform as cntransform
 import CarND.thresholding as cnthresh
 
 
+sane_left = np.zeros(720)
+sane_right = np.zeros(720)
+frameNo = 0
+
+def clear_cache():
+    global sane_left
+    global sane_right
+    global frameNo
+    sane_left = np.zeros(720)
+    sane_right = np.zeros(720)
+    frameNo = 0
+
 def region_of_interest(img, vertices):
     """
     Applies an image mask.
@@ -49,6 +61,7 @@ def getThresholdedBinaryImage(img, ksize=9, show_img=False, name='', save_folder
     color_binary = cnthresh.color_threshold(img, thresh=(170, 255))
 
     combined = np.zeros_like(dir_binary, dtype='uint8')
+    # combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
     combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1)) | (color_binary == 1)] = 255
 
     masked_combined = getMaskedImage(combined)
@@ -95,8 +108,8 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
         ax1.imshow(img, cmap='gray')
         ax1.plot(761, 499, '.')
         ax1.plot(1034, 673, '.')
-        ax1.plot(277, 673, '.')
-        ax1.plot(528, 499, '.')
+        ax1.plot(274, 673, '.')
+        ax1.plot(526, 499, '.')
         ax2.set_title('Warped image')
         ax2.imshow(warped_im, cmap='gray')
 
@@ -201,6 +214,37 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     left_fitx = left_fit[0] * ploty ** 2 + left_fit[1] * ploty + left_fit[2]
     right_fitx = right_fit[0] * ploty ** 2 + right_fit[1] * ploty + right_fit[2]
 
+    fit_diff2 = abs(left_fit[0] - right_fit[0])
+    fit_diff1 = abs(left_fit[1] - right_fit[1])
+    print("fit_diff2: {:.1f}, fit_diff1: {:.1f}".format(fit_diff2, fit_diff1))
+
+    def sane_lane(left_fit, right_fit, left_fitx, right_fitx):
+        threshold = 150000
+        global sane_left
+        global sane_right
+        global frameNo
+
+        if frameNo == 0:
+            sane_left = left_fitx
+            sane_right = right_fitx
+
+        # if detected left lane and right lane are not parallel, it is considered as outliers.
+        # So, it returns previous detected lines in the case.
+        diff_fit1 = abs(left_fit[1] - right_fit[1])
+        if diff_fit1 >= 0.4:
+            return sane_left, sane_right
+
+        diff_left = np.sum(np.abs(left_fitx - sane_left))
+        diff_right = np.sum(np.abs(right_fitx - sane_right))
+        # print("diff_left:", diff_left, ", diff_right:", diff_right)
+        if diff_left < threshold:
+            sane_left = left_fitx
+        if diff_right < threshold:
+            sane_right = right_fitx
+        return sane_left, sane_right
+
+    left_fitx, right_fitx = sane_lane(left_fit, right_fit, left_fitx, right_fitx)
+
     out_img[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] = [255, 0, 0]
     out_img[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [0, 0, 255]
     if show_img:
@@ -284,7 +328,10 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     # Calculate radius of curvature
     y_eval = np.max(ploty)
     ym_per_px = 60/720
-    xm_per_px = 3.7/720
+    # xm_per_px = 3.7/720
+    lane_width = right_fitx[-1] - left_fitx[-1]
+    xm_per_px = 3.7 / lane_width
+
     left_fit_cr = np.polyfit(lefty*ym_per_px, leftx*xm_per_px, 2)
     right_fit_cr = np.polyfit(righty*ym_per_px, rightx*xm_per_px, 2)
     left_curverad = ((1 + (2 * left_fit_cr[0] * y_eval * ym_per_px + left_fit_cr[1]) ** 2) ** 1.5) / np.absolute(2 * left_fit_cr[0])
@@ -296,16 +343,18 @@ def getLaneMaskImage(img, show_img=False, name='', save_folder=None):
     right_line_pos = 1280 - (right_fit[0] * y_eval ** 2 + right_fit[1] * y_eval + right_fit[2])
     vehicle_pos = (left_line_pos - right_line_pos) * xm_per_px
 
+
     return unwarped_im, unwarped_lane_img, curverad, vehicle_pos
 
 
 def getOverlayedImg(img, mtx, dist, show_img=False, name='', save_folder=None):
+    global frameNo
 
     dst = cv2.undistort(img, mtx, dist, None, mtx)
     combined = getThresholdedBinaryImage(dst, show_img=show_img, name=name, save_folder=save_folder)
     area_img, lane_img, curve_rad, vehicle_pos = getLaneMaskImage(combined, show_img=show_img, name=name, save_folder=save_folder)
 
-    out_img = cv2.addWeighted(img, 1, lane_img, 1, 0)
+    out_img = cv2.addWeighted(dst, 1, lane_img, 1, 0)
     out_img = cv2.addWeighted(out_img, 1, area_img, 0.3, 0)
 
     cv2.putText(out_img, 'Radius of Curvature = {:.0f}'.format(curve_rad)+'(m)', (0, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
@@ -314,6 +363,9 @@ def getOverlayedImg(img, mtx, dist, show_img=False, name='', save_folder=None):
         cv2.putText(out_img, 'Vehicle is {:.2f}'.format(abs(vehicle_pos))+'m left of center', (0, 100), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
     else:
         cv2.putText(out_img, 'Vehicle is {:.2f}'.format(abs(vehicle_pos))+'m right of center', (0, 100), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+
+    # cv2.putText(out_img, '{:4d}'.format(frameNo), (0, out_img.shape[0]-50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+    frameNo += 1
 
     if show_img:
         plt.figure()
